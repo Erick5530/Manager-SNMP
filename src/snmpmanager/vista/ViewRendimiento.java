@@ -52,8 +52,14 @@ public class ViewRendimiento extends javax.swing.JFrame {
     int counterreadyCPU2 = 0, countersetCPU2 = 0, countergoToCPU2 = 0;
     int counterreadyHDD = 0, countersetHDD = 0, countergoToHDD = 0;
     int counterreadyRAM = 0, countersetRAM = 0, countergoToRAM = 0;
+   
     double readyCPU1 = 30, setCPU1 = 50, goToCPU1 = 80;
     double readyCPU2 = 30, setCPU2 = 50, goToCPU2 = 80;
+    
+    double readyCPU3 = 30, setCPU3 = 50, goToCPU3 = 80;
+    double readyCPU4 = 30, setCPU4 = 50, goToCPU4 = 80;
+    
+    
     double readyHDD = 25, setHDD = 50, goToHDD = 90;
     double readyRAM = 50, setRAM = 65, goToRAM = 80;
 
@@ -78,8 +84,6 @@ public class ViewRendimiento extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        lblGraficaRed = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         lblHost = new javax.swing.JLabel();
@@ -92,6 +96,8 @@ public class ViewRendimiento extends javax.swing.JFrame {
         lblRecursosHDD = new javax.swing.JLabel();
         lblRecursosRAM = new javax.swing.JLabel();
         lblRecursosCPU1 = new javax.swing.JLabel();
+        lblRecursosCPU3 = new javax.swing.JLabel();
+        lblRecursosCPU4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setResizable(false);
@@ -100,8 +106,6 @@ public class ViewRendimiento extends javax.swing.JFrame {
                 formWindowClosing(evt);
             }
         });
-
-        jLabel1.setText("Red");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel2.setText("Monitor de Rendimiento");
@@ -120,14 +124,33 @@ public class ViewRendimiento extends javax.swing.JFrame {
 
         lblHostName.setText("Host");
 
+        lblRecursosCPU2.setText("cpu2");
+
+        lblRecursosCPU1.setText("cpu1");
+
+        lblRecursosCPU3.setText("cpu3");
+
+        lblRecursosCPU4.setText("cpu4");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblRecursosCPU1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(lblRecursosCPU3, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(lblRecursosCPU2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(lblRecursosCPU4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel4)
@@ -145,25 +168,13 @@ public class ViewRendimiento extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                         .addComponent(lblHostName))))
                             .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addGap(64, 64, 64)
-                                .addComponent(jLabel3)))
-                        .addContainerGap(471, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblGraficaRed, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(lblRecursosCPU1, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblRecursosCPU2, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 3, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(lblRecursosHDD, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(lblRecursosRAM, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addContainerGap())))
+                                .addGap(90, 90, 90)
+                                .addComponent(jLabel3)))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblRecursosRAM, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblRecursosHDD, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(100, 100, 100))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,22 +193,22 @@ public class ViewRendimiento extends javax.swing.JFrame {
                         .addComponent(jLabel5)
                         .addComponent(lblPort)))
                 .addGap(26, 26, 26)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel3))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lblRecursosCPU1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel3)
+                        .addGap(18, 18, 18)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblRecursosCPU3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblRecursosCPU1, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblRecursosHDD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblRecursosRAM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(lblRecursosCPU2, javax.swing.GroupLayout.DEFAULT_SIZE, 188, Short.MAX_VALUE)
+                            .addComponent(lblRecursosCPU4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lblGraficaRed, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblRecursosCPU2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 41, Short.MAX_VALUE)
+                        .addComponent(lblRecursosHDD, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblRecursosRAM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
 
@@ -248,18 +259,18 @@ public class ViewRendimiento extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel lblGraficaRed;
     public javax.swing.JLabel lblHost;
     public javax.swing.JLabel lblHostName;
     public javax.swing.JLabel lblPort;
     private javax.swing.JLabel lblRecursosCPU1;
     private javax.swing.JLabel lblRecursosCPU2;
+    private javax.swing.JLabel lblRecursosCPU3;
+    private javax.swing.JLabel lblRecursosCPU4;
     private javax.swing.JLabel lblRecursosHDD;
     private javax.swing.JLabel lblRecursosRAM;
     // End of variables declaration//GEN-END:variables
@@ -290,8 +301,8 @@ public class ViewRendimiento extends javax.swing.JFrame {
                     rrdDef.addDatasource("cpuusage1", DsType.GAUGE, 600, Double.NaN, Double.NaN);
 //                    //Uso de CPU para ejercicio
                     rrdDef.addDatasource("cpuusage2", DsType.GAUGE, 600, Double.NaN, Double.NaN);
-//                    rrdDef.addDatasource("cpuusage3", DsType.GAUGE, 600, Double.NaN, Double.NaN);
-//                    rrdDef.addDatasource("cpuusage4", DsType.GAUGE, 600, Double.NaN, Double.NaN);
+                    rrdDef.addDatasource("cpuusage3", DsType.GAUGE, 600, Double.NaN, Double.NaN);
+                    rrdDef.addDatasource("cpuusage4", DsType.GAUGE, 600, Double.NaN, Double.NaN);
                     //-------------------------------------------------------------
                     //rrdDef.addDatasource("cpuusage", DsType.GAUGE, 600, Double.NaN, Double.NaN);
                     rrdDef.addDatasource("memoria", DsType.GAUGE, 600, Double.NaN, Double.NaN);
@@ -324,8 +335,8 @@ public class ViewRendimiento extends javax.swing.JFrame {
                                 sample.setValue("memoria", memUsage);
                                 sample.setValue("cpuusage1", Snmpwalk.listaUsoCPU.get(0));
                                 sample.setValue("cpuusage2",Snmpwalk.listaUsoCPU.get(1));
-//                                sample.setValue("cpuusage3",Snmpwalk.listaUsoCPU.get(2));
-//                                sample.setValue("cpuusage4",Snmpwalk.listaUsoCPU.get(3));
+                                sample.setValue("cpuusage3",Snmpwalk.listaUsoCPU.get(2));
+                                sample.setValue("cpuusage4",Snmpwalk.listaUsoCPU.get(3));
                                 sample.update();
                                 rrdDb.close();
                             } catch (Exception e) {
@@ -397,6 +408,63 @@ public class ViewRendimiento extends javax.swing.JFrame {
                                 graphDef.setMinValue(0);
                                 graph = new RrdGraph(graphDef);
                                 graph(graph, lblRecursosCPU2, rrdPAth + "CPU2", 3);
+                                
+                                
+                                //-------- Para CPU 3--------------
+                                graphDef = new RrdGraphDef();
+                                graphDef.setTimeSpan(Util.getTime() - 100, Util.getTime());
+                                graphDef.datasource("cpuusage3", rrdPAth + ".rrd", "cpuusage3", ConsolFun.AVERAGE);
+
+                                //Declaracion de VDEF, para ver como se declara VDEF ve el ejemplo RRD4J Example en Escom Tip
+                                Variable cpuusageMaxPoint3 = new Variable.MAX();
+                                graphDef.datasource("cpuusageMaxPoint3", "cpuusage3", cpuusageMaxPoint3);
+                                currentPoint = new Variable.MIN();
+                                graphDef.datasource("currentPoint", "cpuusage3", currentPoint);
+                                //Imprimir dato en la grafica
+                                graphDef.gprint("cpuusageMaxPoint3", "Max CPU = %.3f%S %%");
+                                graphDef.gprint("currentPoint", "Ready line on HDD = %.3f%S %%");
+                                //Imprimir dato en RDGraph info, al hacer la graficacion  el aricho se genera.
+                                graphDef.print("cpuusageMaxPoint3", "%.3f%S");
+                                graphDef.print("currentPoint", "%.3f%S");
+
+                                graphDef.hrule(readyCPU3, new Color(102, 0, 204), "Ready CPU3", 3);
+                                graphDef.hrule(setCPU3, new Color(153, 51, 255), "Set CPU3", 3);
+                                graphDef.hrule(goToCPU3, new Color(153, 102, 255), "Go CPU3 \\j", 3);
+                                graphDef.line("cpuusage3", new Color(147, 2, 147), "CPU", 1);
+                                graphDef.setFilename(rrdPAth + "CPU3" + ".png");
+                                graphDef.setMaxValue(100);
+                                graphDef.setMinValue(0);
+                                graph = new RrdGraph(graphDef);
+                                graph(graph, lblRecursosCPU3, rrdPAth + "CPU3", 3);
+                                
+                                //-------- Para CPU 4--------------
+                                graphDef = new RrdGraphDef();
+                                graphDef.setTimeSpan(Util.getTime() - 100, Util.getTime());
+                                graphDef.datasource("cpuusage4", rrdPAth + ".rrd", "cpuusage4", ConsolFun.AVERAGE);
+
+                                //Declaracion de VDEF, para ver como se declara VDEF ve el ejemplo RRD4J Example en Escom Tip
+                                Variable cpuusageMaxPoint4 = new Variable.MAX();
+                                graphDef.datasource("cpuusageMaxPoint4", "cpuusage4", cpuusageMaxPoint4);
+                                currentPoint = new Variable.MIN();
+                                graphDef.datasource("currentPoint", "cpuusage4", currentPoint);
+                                //Imprimir dato en la grafica
+                                graphDef.gprint("cpuusageMaxPoint4", "Max CPU = %.3f%S %%");
+                                graphDef.gprint("currentPoint", "Ready line on HDD = %.3f%S %%");
+                                //Imprimir dato en RDGraph info, al hacer la graficacion  el aricho se genera.
+                                graphDef.print("cpuusageMaxPoint4", "%.3f%S");
+                                graphDef.print("currentPoint", "%.3f%S");
+
+                                graphDef.hrule(readyCPU4, new Color(102, 0, 204), "Ready CPU4", 3);
+                                graphDef.hrule(setCPU4, new Color(153, 51, 255), "Set CPU4", 3);
+                                graphDef.hrule(goToCPU4, new Color(153, 102, 255), "Go CPU4 \\j", 3);
+                                graphDef.line("cpuusage4", new Color(147, 2, 147), "CPU", 1);
+                                graphDef.setFilename(rrdPAth + "CPU4" + ".png");
+                                graphDef.setMaxValue(100);
+                                graphDef.setMinValue(0);
+                                graph = new RrdGraph(graphDef);
+                                graph(graph, lblRecursosCPU4, rrdPAth + "CPU4", 4);
+                                
+                                
                                 //----------------- HDD ---------
                                 graphDef = new RrdGraphDef();
                                 graphDef.setTimeSpan(Util.getTime() - 100, Util.getTime());

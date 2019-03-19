@@ -14,6 +14,8 @@ import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.imageio.ImageIO;
@@ -119,7 +121,7 @@ public class ViewStatus extends javax.swing.JFrame {
             }
         });
 
-        jLabel8.setText("Ubicacion");
+        jLabel8.setText("Tiempo encendido");
 
         txtUbic.setEditable(false);
 
@@ -132,57 +134,57 @@ public class ViewStatus extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(171, 171, 171)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtSO, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtLastRes))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(0, 0, Short.MAX_VALUE)
+                                .addComponent(jLabel1))
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtHostN, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtIP, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel4)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtDescr, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel5)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtSO, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtLastRes, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(txtHostN)))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtIP, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(lblGraficaStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 438, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                .addComponent(jLabel9)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtContac, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel8)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(txtUbic, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel6)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(txtInterfaces, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(txtContac, javax.swing.GroupLayout.DEFAULT_SIZE, 136, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel8)
+                        .addGap(18, 18, 18)
+                        .addComponent(txtUbic, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtInterfaces, javax.swing.GroupLayout.PREFERRED_SIZE, 43, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(lblGraficaStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 488, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(6, 6, 6)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtHostN, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -198,16 +200,16 @@ public class ViewStatus extends javax.swing.JFrame {
                     .addComponent(txtLastRes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtInterfaces)
-                    .addComponent(jLabel6)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel8)
-                        .addComponent(txtUbic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel6)
+                        .addComponent(txtInterfaces)
+                        .addComponent(txtUbic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel8))
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel9)
                         .addComponent(txtContac, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(lblGraficaStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(40, 40, 40)
+                .addComponent(lblGraficaStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -284,6 +286,7 @@ public class ViewStatus extends javax.swing.JFrame {
 
     private void startGettingInfo() {
         try {
+            
             client = new SNMPManager("udp:" + ViewManager.statusIP + "/" + ViewManager.statusPort);
             AgenteDAL adal = new AgenteDAL();
             AgenteSNMP a = adal.obtenerUnAgente(ViewManager.statusIP);
@@ -295,9 +298,15 @@ public class ViewStatus extends javax.swing.JFrame {
             txtDescr.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.1.0")));
             txtIP.setText(ViewManager.statusIP);
             txtInterfaces.setText(client.getAsString(new OID(".1.3.6.1.2.1.2.1.0")));
-            txtLastRes.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.8.0")));
+            
             txtSO.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.1.0")));
-            txtUbic.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.6.0")));
+            txtUbic.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.3.0")));
+            
+            
+            txtLastRes.setText(getUltimoReinicio(txtUbic.getText()));
+            
+            
+            
 
             
 
@@ -338,11 +347,12 @@ public class ViewStatus extends javax.swing.JFrame {
                         sample.update();
                         System.out.println(Util.getTime() + ":" + Double.parseDouble(data.get(0)) + ":" + Double.parseDouble(data.get(1)));
                         rrdDb.close();
+                        txtUbic.setText(client.getAsString(new OID(".1.3.6.1.2.1.1.3.0")));
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-            }, 0, 1000);
+            }, 0, 5000);
 
             contadorRefresco = 0;
             tGraph = new Timer();
@@ -355,8 +365,8 @@ public class ViewStatus extends javax.swing.JFrame {
                         graphDef.setTimeSpan(Util.getTime() - 100, Util.getTime());
                         graphDef.datasource("outoctets", rrdPAth + ".rrd", "outoctets", ConsolFun.AVERAGE);
                         graphDef.datasource("inoctets", rrdPAth + ".rrd", "inoctets", ConsolFun.AVERAGE);
-                        graphDef.area("inoctets", Color.GREEN, "In Traffic");
-                        graphDef.line("outoctets", new Color(0xFF, 0, 0), "Out Traffic", 2);
+                        graphDef.area("inoctets", Color.GREEN, "Trafico entrante");
+                        graphDef.line("outoctets", new Color(0xFF, 0, 0), "Trafico saliente", 2);
                         graphDef.setFilename(rrdPAth + ".gif");
                         RrdGraph graph = new RrdGraph(graphDef);
                         BufferedImage bi = new BufferedImage(100, 100, BufferedImage.TYPE_INT_RGB);
@@ -377,7 +387,7 @@ public class ViewStatus extends javax.swing.JFrame {
                         e.printStackTrace();
                     }
                 }
-            }, 0, 1000);
+            }, 0, 5000);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -388,5 +398,23 @@ public class ViewStatus extends javax.swing.JFrame {
     static void println(String msg) {
         //System.out.println(msg + " " + Util.getLapTime());
         System.out.println(msg);
+    }
+    
+    
+    private String getUltimoReinicio(String oid){
+        
+        String valuesHrs[] = oid.split(":");
+        
+        int horas = Integer.parseInt(valuesHrs[0]);
+        int minutos = Integer.parseInt(valuesHrs[1]);
+        horas = horas * 60;
+        
+        
+          // Obtiene fecha y hora actuales
+        Calendar fecha = Calendar.getInstance();
+        fecha.add(Calendar.MINUTE, (-1)* (horas + minutos));
+       
+         return String.format("%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS", fecha);
+    
     }
 }
