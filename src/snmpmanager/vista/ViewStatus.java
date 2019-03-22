@@ -316,7 +316,7 @@ public class ViewStatus extends javax.swing.JFrame {
         try {
             String[] name = ViewManager.statusIP.split("\\.");
             System.out.println("Name " + name.length);
-            String rrdPAth = "src/snmpmanager/db/RRDAgente" + name[3];
+            String rrdPAth = "/src/snmpmanager/db/RRDAgente" + name[3];
             RrdDef rrdDef = new RrdDef(rrdPAth+".rrd");
 
             rrdDef.setStartTime(Util.getTime() -100);
