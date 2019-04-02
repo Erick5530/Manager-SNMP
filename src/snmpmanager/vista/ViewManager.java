@@ -84,7 +84,7 @@ public class ViewManager extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel1.setText("Inicio");
 
-        jLabel2.setText("Interfaces inalambricas");
+        jLabel2.setText("Interfaces");
 
         txtAEstatusGeneral.setEditable(false);
         txtAEstatusGeneral.setColumns(20);

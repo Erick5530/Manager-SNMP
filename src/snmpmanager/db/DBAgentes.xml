@@ -6,7 +6,8 @@ and open the template in the editor.
      <Agente>
          <comunidad>ASREjercicio</comunidad>
          <contacto/>
-         <ip>192.168.43.11</ip>
+         <!--<ip>192.168.43.11</ip>-->
+         <ip>192.168.1.70</ip>
          <interfaces/>
          <nombre>Linux (Ubuntu)</nombre>
          <puerto>161</puerto>

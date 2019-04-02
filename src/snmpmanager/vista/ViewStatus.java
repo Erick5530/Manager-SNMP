@@ -316,7 +316,8 @@ public class ViewStatus extends javax.swing.JFrame {
         try {
             String[] name = ViewManager.statusIP.split("\\.");
             System.out.println("Name " + name.length);
-            String rrdPAth = "/src/snmpmanager/db/RRDAgente" + name[3];
+            System.out.println("system direct user:" + System.getProperty("user.dir"));
+            String rrdPAth = System.getProperty("user.dir")+"/src/snmpmanager/db/RRDAgente" + name[3];
             RrdDef rrdDef = new RrdDef(rrdPAth+".rrd");
 
             rrdDef.setStartTime(Util.getTime() -100);
@@ -414,7 +415,7 @@ public class ViewStatus extends javax.swing.JFrame {
         Calendar fecha = Calendar.getInstance();
         fecha.add(Calendar.MINUTE, (-1)* (horas + minutos));
        
-         return String.format("%1$tY-%1$tm-%1$td %1$tH:%1$tM:%1$tS", fecha);
+         return String.format("%1$tY-%1$tm-%1$td %1$tH:%1$tM", fecha);
     
     }
 }

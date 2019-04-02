@@ -42,7 +42,8 @@ public class AgenteDAL {
         try{
             DocumentBuilderFactory docFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder docBuilder = docFactory.newDocumentBuilder();
-            Document doc = docBuilder.parse("src/snmpmanager/db/DBAgentes.xml");
+             System.out.println("system direct user:" + System.getProperty("user.dir"));
+            Document doc = docBuilder.parse(System.getProperty("user.dir")+"/src/snmpmanager/db/DBAgentes.xml");
             doc.normalize();
             NodeList nodosAgente = doc.getElementsByTagName("Agente");
             for (int i = 0; i < nodosAgente.getLength(); i++) {

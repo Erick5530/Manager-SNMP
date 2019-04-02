@@ -11,10 +11,6 @@ import org.snmp4j.smi.OID;
 import org.snmp4j.smi.OctetString;
 import org.snmp4j.smi.Variable;
 
-/**
- *
- * @author Dell
- */
 public class MOCreator {
     public static MOScalar createReadOnly(OID oid,Object value ){
 		return new MOScalar(oid,
